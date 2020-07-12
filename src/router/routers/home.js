@@ -1,0 +1,44 @@
+// 首页
+export default {
+    path:'/home',
+    name:"首页",
+    component:()=>import("../../views/home.vue"),
+    children:[
+        {path:"/",redirect: "/home/recommend"},
+        {
+            path:"recommend",
+            name:"推荐",
+            component:()=>import("../../components/home/recommend.vue")
+        },
+        {
+            path:"phone",
+            name:"手机",
+            component:()=>import("../../components/home/phone.vue")
+        },
+        {
+            path:"intelligence",
+            name:"智能",
+            component:()=>import("../../components/home/intelligence.vue")
+        },
+        {
+            path:"televisions",
+            name:"电视",
+            component:()=>import("../../components/home/televisions.vue")
+        },
+        {
+            path:"notebook",
+            name:"笔记本",
+            component:()=>import("../../components/home/notebook.vue")
+        },
+        {
+            path:"appliances",
+            name:"家电",
+            component:()=>import("../../components/home/appliances.vue")
+        },
+        {
+            path:"ambitus",
+            name:"周边",
+            component:()=>import("../../components/home/ambitus.vue")
+        },
+    ]
+}
